@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ ! "$(docker ps -q -f name=n8n)" ]; then echo "Error: n8n is not running (run scripts/setup)."; exit 1; fi
+docker exec n8n sh -c "n8n import:credentials --separate --input=backups/latest/credentials"
+docker exec n8n sh -c "n8n import:workflow --separate --input=backups/latest/workflow"

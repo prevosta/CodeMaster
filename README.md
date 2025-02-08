@@ -1,42 +1,80 @@
-# AI Software Development
+# Large Language Models Toolkit
 
-## Overview
-This document outlines the design and functionality of a network of AI agents that mimic the roles in a typical software development firm.
+A comprehensive toolkit for working with Large Language Models (LLMs). It offers tools to interact with LLMs and run automation tasks directly. Ideal for researchers and developers looking to streamline their workflows with advanced language model capabilities.
 
-## AI Agents and Their Roles
+## Getting Started
 
-### 1. Project Manager Agent
-- **Role**: Manages the overall project timeline, resource allocation, and communication between different agents.
+To set up and run the Docker containers, follow these steps:
 
-### 2. Requirement Analyst Agent
-- **Role**: Gathers and analyzes user requirements and translates them into technical specifications.
+1. Clone the repository:
+   ```
+   git clone git@bitbucket.org:bid-group/llm-toolkit.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd /home/comact/llm-toolkit
+   ```
+3. Run the setup script to install dependencies and start the services:
+   ```
+   ./scripts/setup
+   ```
 
-### 3. Design Agent
-- **Role**: Creates wireframes, mockups, and design documentation based on the requirements.
+## Accessing the Services
 
-### 4. Frontend Developer Agent
-- **Role**: Implements the user interface (UI) designs and ensures a seamless user experience (UX).
+- The `ollama` service will be accessible at `http://localhost:11434`.
+- The `open-webui` service will be accessible at `http://localhost:3000`.
+- The `n8n` service will be accessible at `http://localhost:5678`.
 
-### 5. Backend Developer Agent
-- **Role**: Develops server-side logic, APIs, and integrates with databases and external services.
+## Stopping the Services
 
-### 6. Database Administrator Agent
-- **Role**: Manages the database design, optimization, and maintenance.
+To stop the running services, use:
+```
+./scripts/teardown
+```
+To remove volumes as well, use:
+```
+./scripts/teardown --hard
+```
 
-### 7. QA Engineer Agent
-- **Role**: Conducts automated and manual testing to identify bugs and ensure the quality of the software.
+## Project Structure
 
-### 8. DevOps Agent
-- **Role**: Manages the CI/CD pipeline, deployment, and infrastructure automation.
+```
+llm-toolkit
+├── docker-compose.yml
+├── scripts
+│   ├── setup
+│   └── teardown
+├── shared
+│   ├── done
+│   │   ├── Annex-A.md
+│   │   ├── ADFContinuationBonusfactsheet.md
+│   │   └── 2024DefenceWorkforcePlanfactsheet.md
+├── .vscode
+│   └── extensions.json
+├── .gitignore
+└── README.md
+```
 
-### 9. Security Analyst Agent
-- **Role**: Ensures the software is secure by identifying vulnerabilities and implementing security measures.
+## Services
 
-### 10. Technical Writer Agent
-- **Role**: Creates documentation, user manuals, and guides for the software.
+### ollama
 
-### 11. Support Agent
-- **Role**: Provides technical support and troubleshooting assistance to users.
+The `ollama` service is responsible for [describe the purpose of the ollama service]. It uses GPU resources for enhanced performance.
 
-## Conclusion
-This network of AI agents covers the major roles in a software development firm, ensuring a streamlined and efficient development process. Each agent focuses on a specific aspect of the project, working together to deliver high-quality software solutions.
+### open-webui
+
+The `open-webui` service provides a web interface for [describe the purpose of the open-webui service].
+
+### n8n
+
+The `n8n` service is a workflow automation tool that allows you to automate tasks and integrate various services.
+
+## Recommended VS Code Extensions
+
+To enhance your development experience, it is recommended to install the following VS Code extensions:
+- GitHub Copilot
+- Docker
+
+## License
+
+All rights reserved.

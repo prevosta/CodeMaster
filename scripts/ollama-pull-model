@@ -1,0 +1,5 @@
+#!/bin/bash
+docker exec -it ollama bash -c "ollama list"
+docker exec -it ollama bash -c "ollama pull deepseek-r1:14b"
+docker exec -it ollama bash -c "ollama pull llama3.2:latest"
+docker exec -it ollama bash -c "ollama list"
