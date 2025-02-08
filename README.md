@@ -1,4 +1,4 @@
-# AI Software Development Firm Design Document
+# AI Software Development
 
 ## Overview
 This document outlines the design and functionality of a network of AI agents that mimic the roles in a typical software development firm.
